@@ -11,7 +11,7 @@ const Header = () => {
         } else if (e.key < 3) {
             Router.push('/list?id=' + e.key)
         } else {
-            window.location.href = '//www.qiweijie.com'
+            window.location.href = '//www.qiweijie.com/cv'
         }
     }
     return (
