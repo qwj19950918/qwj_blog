@@ -49,7 +49,7 @@ module.exports = appInfo => {
   config.cluster = {
     listen: {
       port: 7001,
-      hostname: '45.76.172.8'
+      hostname: process.env.NODE_ENV === 'development' ? '127.0.0.1' : '45.76.172.8'
     }
   }
 
