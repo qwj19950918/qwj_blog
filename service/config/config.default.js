@@ -11,7 +11,6 @@ module.exports = appInfo => {
    * @type {Egg.EggAppConfig}
    **/
   const config = exports = {};
-
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1587608768118_9872';
 
@@ -47,6 +46,12 @@ module.exports = appInfo => {
     credentials: true,//允许cookie可以跨域
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   }
+  config.cluster = {
+    listen: {
+      port: 7001,
+      hostname: '45.76.172.8'
+    }
+  }
 
   // add your user config here
   const userConfig = {
@@ -55,6 +60,6 @@ module.exports = appInfo => {
 
   return {
     ...config,
-    ...userConfig,
+    ...userConfig
   };
 };
