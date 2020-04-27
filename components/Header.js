@@ -1,6 +1,6 @@
 import React from 'react'
 import '../public/style/components/header.css'
-import { Row, Col, Menu, Icon } from 'antd'
+import { Row, Col, Menu} from 'antd'
 import { HomeOutlined, SmileOutlined, YoutubeOutlined, BulbOutlined } from '@ant-design/icons'
 import Router from 'next/router'
 import Link from 'next/link'
