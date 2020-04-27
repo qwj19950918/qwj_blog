@@ -3,7 +3,7 @@
 'use strict';
 
 /**
- * @param {Egg.EggAppInfo} appInfo app info
+ * @param {Egg.EggAppInfo} appInfo app infoa
  */
 module.exports = appInfo => {
   /**
