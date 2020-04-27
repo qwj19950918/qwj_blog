@@ -21,13 +21,13 @@ module.exports = appInfo => {
     // database configuration
     client: {
       // host
-      host: 'localhost',
+      host: '45.76.172.8',
       // port
       port: '3306',
       // username
       user: 'root',
       // password
-      password: '12345678',
+      password: 'walle',
       // database
       database: 'qwj_blog',
     },
