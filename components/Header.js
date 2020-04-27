@@ -1,15 +1,17 @@
 import React from 'react'
 import '../public/style/components/header.css'
 import { Row, Col, Menu, Icon } from 'antd'
-import { HomeOutlined, SmileOutlined, YoutubeOutlined } from '@ant-design/icons'
+import { HomeOutlined, SmileOutlined, YoutubeOutlined, BulbOutlined } from '@ant-design/icons'
 import Router from 'next/router'
 import Link from 'next/link'
 const Header = () => {
     const handleClick = (e) => {
-        if(e.key == 0){
+        if (e.key == 0) {
             Router.push('/')
-        }else{
-            Router.push('/list?id='+e.key)
+        } else if (e.key < 3) {
+            Router.push('/list?id=' + e.key)
+        } else {
+            window.location.href = '//www.qiweijie.com'
         }
     }
     return (
@@ -17,7 +19,7 @@ const Header = () => {
             <Row type="flex" justify="center">
                 <Col xs={24} sm={24} md={10} lg={15} xl={12}>
                     <span className="header-logo">
-                        <Link href={{pathname:'/'}}>
+                        <Link href={{ pathname: '/' }}>
                             <a>鱼弦</a>
                         </Link>
                     </span>
@@ -36,6 +38,10 @@ const Header = () => {
                         <Menu.Item key="2" onClick={handleClick}>
                             <SmileOutlined />
                             生活
+                        </Menu.Item>
+                        <Menu.Item key="3" onClick={handleClick}>
+                            <BulbOutlined />
+                            简历
                         </Menu.Item>
                     </Menu>
                 </Col>
