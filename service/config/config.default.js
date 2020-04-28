@@ -39,7 +39,7 @@ module.exports = appInfo => {
     csrf: {
       enable: false
     },
-    domainWhiteList: ['//qiweijie.com', 'http://localhost:3000', 'http://localhost:3001']
+    domainWhiteList: ['http://www.qiweijie.com', 'http://localhost:3000', 'http://localhost:3001']
   };
   config.cors = {
     // origin: 'http://localhost:3001',
