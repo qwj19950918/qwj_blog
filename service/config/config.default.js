@@ -46,12 +46,12 @@ module.exports = appInfo => {
     credentials: true,//允许cookie可以跨域
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   }
-  config.cluster = {
+ /*  config.cluster = {
     listen: {
       port: 7001,
       hostname: process.env.NODE_ENV === 'development' ? '127.0.0.1' : 'localhost'
     }
-  }
+  } */
 
   // add your user config here
   const userConfig = {
